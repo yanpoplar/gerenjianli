@@ -1,0 +1,92 @@
+*{padding: 0px;margin:0px;}
+body{margin:0;background:#EFEFEF;}
+ol,ul{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+.clearfix::after{content: "";display: block;clear:both;}
+.topNavBar-inner{padding: 0px 16px; }
+.topNavBar{padding: 20px 0px;position:fixed;top: 0px;left:0px;width: 100%;transition:all 0.75s;color:rgb(204,206,209)}
+.topNavBar.sticky{background: white;padding:5px 0;z-index: 1;box-shadow:0 0 25px rgba(0,0,0,0.75);color:#3d4451}
+.topNavBar .submeau{display: none;}
+.topNavBar .submeau>li{white-space: nowrap;}
+.topNavBar .active .submeau{display: block;position: absolute;left:0px;top:100%;color:#3d4451;background: white;animation:submeauSlide linear 0.3s;box-shadow:4px 4px 5px rgba(0,0,0,0.5);}
+@keyframes submeauSlide{0%{transform: translate(-20px)}100%{transform: translate(0px)}}
+.topNavBar .active .submeau>li{padding:5px 10px;font-size: 12px;cursor: pointer}
+.topNavBar nav>ul{list-style:none;margin:0;padding:0;}
+.topNavBar nav>ul>li{float: right;margin-right:17px;margin-left:17px;position: relative;}
+.topNavBar nav>ul>li>a{font-size: 12px;color:inherit;text-decoration: none;font-weight: bold;
+border-top: 3px solid transparent;border-bottom: 3px solid transparent;padding-top:6px;padding-bottom: 3px;display:block;
+position:relative}
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav>ul>li.hignlight>a::after{content:'';display:block;position:absolute;top:100%;left:0;width:100%;font-size:16px;
+background:#E6686A;height:3px;transform: all 0.75s;animation:meauSlide linear 0.3s}
+[data-x].offset{transform: translateY(-40px)}
+[data-x]{transform: translateY(10px);transition:3s}
+
+@keyframes meauSlide{0%{width:0}100%{width:100%}}
+a{text-decoration: none;}
+.logo{float:left;}
+.topNavBar .logo{padding-bottom: 1px;font-size:24px;font-family: "Arial Black";}
+.topNavBar .logo .rs{margin-right:4px;color: rgb(230,104,106);}
+.topNavBar .logo .card{color: rgb(154,156,162);}
+.banner{height:512px;background-image:url(../img/rs-cover-2-2-1-1.jpg);background-position: center center;background-size:cover;}
+.banner .mask{height: 512px;background-color:rgba(0,0,0,0.6)}
+.userCard{padding-top:50px;max-width:780px;margin-left:auto;margin-right:auto;
+background:#ffffff;box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);}
+.userCard .pictureAndText{padding:0 40px;}
+.userCard .picture{float:left;}
+.userCard .text{padding-left:50px;max-width: 300px;float:left;}
+.userCard .welcome{background:#e6686a;color: #EFEFEF;display: inline-block;padding:5px 5px;position:relative;margin-top:10px;}
+.userCard .welcome .triangle{display: block;border:12px solid transparent;width:0px;
+border-left-color:#E6686A;border-top-width:0px;top:100%;left:4px;position:absolute;}
+.userCard .text>h1{margin-top:26px;margin-bottom:17px;}
+.userCard .text>hr{height:0px;border:none;border:1px solid #dedede;margin:10px ;}
+.userCard .text>dl>dd,
+.userCard .text>dl>dt{float:left;padding:4px 0;}
+.userCard .text>dl>dd{width:30%;font-weight:blod;}
+.userCard .text>dl>dt{width:70%;color:#9198a8;}
+.userCard footer.media{background: #E6686A;text-align:center;display: block;margin-top:20px;margin-bottom:20px}
+.userCard footer.media >a{display: inline-block;border-radius:50%;padding:10px;margin:0 100px;}
+.userCard footer.media >a:hover{background:#cf5d5f}
+.userCard footer.media .icon{width:40px;height:40px;fill:white;}
+body>main{margin-top:-300px;}
+body>main .downloadResume{font-size:14px;line-height:16px;padding:21px 55px;display: inline-block;
+border:1px solid #cdcfd1;background: #efefef;border-radius:5px;color:#3d4451;font-weight: bold;margin:32px 0;}
+body>main .downloadResume-warpper{text-align:center;}
+body>main .downloadResume:hover{transition:box-shadow 0.2s;box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.5);}
+body>main .selfIntroduction{display: block;max-width:780px;margin-left:auto;margin-right:auto;
+text-align: center;font-size:20px;font-family:Microsoft YaHei;padding: 0 0;}
+section.portfolio,
+section.skills{margin-top:50px;max-width:780px;margin-left:auto;margin-right:auto;}
+section.portfolio >h2,
+section.skills > h2{color: #3d4451;font-size: 34px;line-height: 1.2;font-weight: 600;text-align: center;padding-bottom:25px;}
+section.skills > ol > li > h3{font-size:14px;color:#757A83;}
+section.skills>ol{box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);max-width:780px;margin-left:auto;margin-right:auto;background: white;}
+section.skills>ol>li{float:left;width:42%;margin:14px 18px;padding-left:15px; }
+.skills .progressBar{height:5px;background: #FAE1E1;margin:5px 0;border-radius:3px;overflow:hidden}
+.skills .progressBar> .progress{height:100%;width:40%;background: #E6686A;border-radius:3px;transform: translateX(-100%)}
+.skills.offset .progressBar> .progress{height:100%;width:40%;background: #E6686A;border-radius:3px;transform: translateX(0);transition:all 3s;}
+
+section.portfolio{text-align:center;}
+section.portfolio>nav{display: inline-block;vertical-align: top;margin-top:15px;}
+section.portfolio>nav>ol{display: inline-block;vertical-align: top;text-align:center;padding-bottom:20px;}
+section.portfolio>nav>ol>li{float: left;margin-left:40px;cursor: pointer;}
+section.portfolio>nav>ol>li:nth-child(1){margin-left:20px;}
+section.portfolio>nav>ol>li:nth-child(3){margin-right:20px;}
+section.portfolio>nav .bar{height:5px;margin-top:10px;background: #FAE1E1;border-radius:3px;}
+section.portfolio>nav .bar .bar-inner{height: 100%;background: #E6686A;border-radius:3px;transition:all 0.6s;width: 23%;}
+section.portfolio>nav .bar.state-1 .bar-inner{margin-left:0px;width: 23%;}
+section.portfolio>nav .bar.state-2 .bar-inner{margin-left:74px;width:29%;}
+section.portfolio>nav .bar.state-3 .bar-inner{margin-left:180px;width:48%;}
+section.portfolio .works{position: relative;margin:30px 0;}
+section.portfolio .works .small,
+section.portfolio .works .big{position: absolute;}
+
+.loading{height:100px;width:100px;position:relative;}
+.loading::before, .loading::after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:gray;border-radius:50%;margin:auto;animation: s 2s linear infinite;}
+.loading::after{animation-delay: 0.75s;}
+@keyframes s{0%{width:0;height:0;opacity:1}100%{width:100px;height:100px;opacity:0}}
+
+.icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
+.site-welcome{background:white;display: none;position:fixed;width:100%;height:100%;top:0;left:0;z-index: 2;justify-content: center;align-items: center;}
+.site-welcome.active{display: flex;}
+
